@@ -1,9 +1,9 @@
 <aside class="layout-menu menu-vertical menu bg-menu-theme" id="layout-menu">
     <div class="app-brand demo">
         <a class="app-brand-link" href="{{ route('dashboard') }}">
-            <img class=""
+            <img class="" style="margin-left: 50px"
                 src="{{ $settings['site_main_logo'] ? asset('admin/images/setting/' . $settings['site_main_logo']) : asset('admin/images/logo.png') }}"
-                alt="logo" height="60">
+                alt="logo" height="70">
         </a>
 
         <a class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none" href="javascript:void(0);">

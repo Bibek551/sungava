@@ -7,6 +7,7 @@ use App\Http\Requests\Admin\StoreDestinationRequest;
 use App\Http\Requests\Admin\UpdateDestinationRequest;
 use App\Models\Destination;
 use App\Models\DestinationInformation;
+use Facade\FlareClient\Stacktrace\File as StacktraceFile;
 use Illuminate\Http\Request;
 use File;
 use Illuminate\Support\Str;
