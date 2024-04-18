@@ -17,9 +17,6 @@
                             <p class="mb-4">
                                 Welcome to <span class="fw-bold">Sungava Travel</span> Admin panel.
                             </p>
-
-                            {{-- <a href="{{ route('admin.inquiry.index') }}" class="btn btn-sm btn-outline-primary">View
-                                Inquiries</a> --}}
                         </div>
                     </div>
                     <div class="col-sm-5 text-center text-sm-left">
@@ -63,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 mb-4">
+                <div class="col-lg-3 col-md-12 col-6 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-title d-flex align-items-start justify-content-between">
@@ -77,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 mb-4">
+                <div class="col-lg-3 col-md-12 col-6 mb-4">
                     <div class="card">
                         <div class="card-body">
                             <div class="card-title d-flex align-items-start justify-content-between">

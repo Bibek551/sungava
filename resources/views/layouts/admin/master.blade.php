@@ -126,7 +126,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <!-- CkEditor-->
-    <script src="{{ asset('admin/assets/local/js/ckeditor.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/super-build/ckeditor.js"></script>
 
     <!-- sweet alert -->
     <script src="{{ asset('admin/assets/local/js/sweetalert.min.js') }}"></script>
