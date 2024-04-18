@@ -13,7 +13,8 @@ class Testimonial extends Model
         'image',
         'description',
         'position',
-        'order'
+        'order',
+        'rating'
     ];
 
     public function getImageAttribute($value)
