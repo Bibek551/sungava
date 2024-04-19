@@ -37,6 +37,17 @@ class DatabaseSeeder extends Seeder
             ['homepage_blog_section_description', 'Blog Ipsum is simply dummy text of the printing and typesetting industry.'],
             ['ourteam_section_description', 'Ourteam Ipsum is simply dummy text of the printing and typesetting industry.'],
             ['service_section_description', 'Service Ipsum is simply dummy text of the printing and typesetting industry.'],
+            ['about_section_description', 'Service Ipsum is simply dummy text of the printing and typesetting industry.'],
+
+            ['destination_title', ''],
+            ['destination_slogan', ''],
+            ['testimonial_title', ''],
+            ['testimonial_slogan', ''],
+            ['about_title', ''],
+            ['team_title', ''],
+            ['team_slogan', ''],
+            ['package_title', ''],
+            ['blog_title', ''],
 
             ['homepage_seo_title', 'Sungava'],
             ['homepage_seo_description', 'Sungava'],

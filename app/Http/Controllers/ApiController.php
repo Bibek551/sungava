@@ -302,10 +302,10 @@ class ApiController extends Controller
         }
     }
 
-    public function singlePage($slug)
+    public function singlePage($id)
     {
         try {
-            $page = Page::where('slug', $slug)->first();
+            $page = Page::where('id', $id)->first();
             return response()->json([
                 "statusCode" => 200,
                 "error" => false,

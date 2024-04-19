@@ -51,7 +51,7 @@ Route::post('inquiries', [ApiController::class, 'inquiryStore'])->name('inquirie
 
 //pages
 Route::get('pages', [ApiController::class, 'pageIndex'])->name('pages');
-Route::get('page/{slug}', [ApiController::class, 'singlePage'])->name('page.single');
+Route::get('page/{id}', [ApiController::class, 'singlePage'])->name('page.single');
 
 //social medias
 Route::get('socialmedias', [ApiController::class, 'socialMediaIndex'])->name('socialmedias');

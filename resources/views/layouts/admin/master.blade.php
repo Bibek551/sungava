@@ -10,6 +10,11 @@
     <title> @yield('title', 'Sungava Travel') </title>
 
     <meta name="description" content="" />
+    {{-- <style>
+        .ck-content {
+            font-size: 20px;
+        }
+    </style> --}}
 
     <link rel="icon" type="image/x-icon"
         href="{{ $settings['fav_icon'] ? asset('admin/images/setting/' . $settings['fav_icon']) : asset('admin/images/logo.png') }}">
