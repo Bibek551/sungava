@@ -47,7 +47,12 @@ class DatabaseSeeder extends Seeder
             ['team_title', ''],
             ['team_slogan', ''],
             ['package_title', ''],
+            ['package_slogan', ''],
             ['blog_title', ''],
+
+            ['destination_count', '50+'],
+            ['package_count', '150+'],
+            ['customer_count', '30k+'],
 
             ['homepage_seo_title', 'Sungava'],
             ['homepage_seo_description', 'Sungava'],
@@ -64,6 +69,8 @@ class DatabaseSeeder extends Seeder
             ['aboutpage_seo_description', 'Sungava'],
             ['aboutpage_seo_keywords', 'Sungava'],
             ['about_page_image', null],
+            ['about_page_image_2', null],
+            ['about_page_image_3', null],
 
             ['contactpage_seo_title', 'Sungava'],
             ['contactpage_seo_description', 'Sungava'],

@@ -26,6 +26,8 @@ class SettingController extends Controller
         $old_fav_icon = $siteSettings['fav_icon'];
         $old_service_image = $siteSettings['service_image'];
         $old_about_page_image = $siteSettings['about_page_image'];
+        $old_about_page_image_2 = $siteSettings['about_page_image_2'];
+        $old_about_page_image_3 = $siteSettings['about_page_image_3'];
         $old_contact_page_image = $siteSettings['contact_page_image'];
         $old_affiliated_image = $siteSettings['affiliated_image'];
         $old_coe_image = $siteSettings['coe_image'];
@@ -38,6 +40,8 @@ class SettingController extends Controller
         $fav_icon = $this->fileUpload($request, 'fav_icon');
         $service_image = $this->fileUpload($request, 'service_image');
         $about_page_image = $this->fileUpload($request, 'about_page_image');
+        $about_page_image_2 = $this->fileUpload($request, 'about_page_image_2');
+        $about_page_image_3 = $this->fileUpload($request, 'about_page_image_3');
         $contact_page_image = $this->fileUpload($request, 'contact_page_image');
         $affiliated_image = $this->fileUpload($request, 'affiliated_image');
         $coe_image = $this->fileUpload($request, 'coe_image');
@@ -84,6 +88,20 @@ class SettingController extends Controller
             $input['about_page_image'] = $about_page_image;
         } else {
             unset($input['about_page_image']);
+        }
+
+        if ($about_page_image_2) {
+            $this->removeFile($old_about_page_image_2);
+            $input['about_page_image_2'] = $about_page_image_2;
+        } else {
+            unset($input['about_page_image_2']);
+        }
+
+        if ($about_page_image_3) {
+            $this->removeFile($old_about_page_image_3);
+            $input['about_page_image_3'] = $about_page_image_3;
+        } else {
+            unset($input['about_page_image_3']);
         }
 
         if ($contact_page_image) {

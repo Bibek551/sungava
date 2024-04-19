@@ -449,6 +449,14 @@ class ApiController extends Controller
                 $settings['about_page_image'] = asset('admin/images/setting/' . $settings['about_page_image']);
             }
 
+            if ($settings['about_page_image_2']) {
+                $settings['about_page_image_2'] = asset('admin/images/setting/' . $settings['about_page_image_2']);
+            }
+
+            if ($settings['about_page_image_3']) {
+                $settings['about_page_image_3'] = asset('admin/images/setting/' . $settings['about_page_image_3']);
+            }
+
             if ($settings['contact_page_image']) {
                 $settings['contact_page_image'] = asset('admin/images/setting/' . $settings['contact_page_image']);
             }

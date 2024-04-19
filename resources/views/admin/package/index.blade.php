@@ -12,9 +12,9 @@
                             <input class="form-control search-input" name="search" type="text" placeholder="Search ..."
                                 value="{{ request('search') ?? '' }}" aria-label="Search" autocomplete="off">
 
-                            <button type="submit" class="input-group-text"><i class="tf-icons bx bx-search"></i>
+                            <button class="input-group-text" type="submit"><i class="tf-icons bx bx-search"></i>
                                 Search</button>
-                            <a href="{{ route('admin.packages.index') }}" class="input-group-text"> Reset</a>
+                            <a class="input-group-text" href="{{ route('admin.packages.index') }}"> Reset</a>
                         </div>
                     </div>
                 </form>
@@ -23,7 +23,7 @@
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="mb-0">Packages ({{ $packages->total() }})</h5>
             <small class="text-muted float-end">
-                <a href="{{ route('admin.packages.create') }}" class="btn btn-primary"><i class="fa-solid fa-plus"></i>
+                <a class="btn btn-primary" href="{{ route('admin.packages.create') }}"><i class="fa-solid fa-plus"></i>
                     Create</a>
             </small>
         </div>
@@ -47,9 +47,9 @@
                             <tr>
                                 <td><strong>{{ $key + $packages->firstItem() }}</strong></td>
                                 <td class="">
-                                    <a href="{{ $package->image ?: 'avatar.png' }}" data-fancybox="demo" class="fancybox">
+                                    <a class="fancybox" data-fancybox="demo" href="{{ $package->image ?: 'avatar.png' }}">
                                         <img src="{{ $package->image ?: 'avatar.png' }}" alt="{{ $package->name }}"
-                                            width="80px">
+                                            width="80px" height="60px">
                                     </a>
                                 </td>
                                 <td><strong>{{ $package->name ?? '' }}</strong></td>
@@ -62,20 +62,21 @@
                                 </td>
 
                                 <td>
-                                    <a href="{{ route('admin.packages.show', $package->id) }}"
-                                        style="float: left;margin-right: 5px;" class="btn btn-sm btn-warning"><i
-                                            class="fa fa-eye"></i> Show</a>
+                                    <a class="btn btn-sm btn-warning"
+                                        href="{{ route('admin.packages.show', $package->id) }}"
+                                        style="float: left;margin-right: 5px;"><i class="fa fa-eye"></i> Show</a>
 
-                                    <a href="{{ route('admin.packages.edit', $package->id) }}"
-                                        style="float: left;margin-right: 5px;" class="btn btn-sm btn-primary"><i
-                                            class="fa-solid fa-pen-to-square"></i> Edit</a>
+                                    <a class="btn btn-sm btn-primary"
+                                        href="{{ route('admin.packages.edit', $package->id) }}"
+                                        style="float: left;margin-right: 5px;"><i class="fa-solid fa-pen-to-square"></i>
+                                        Edit</a>
 
                                     <form class="delete-form" action="{{ route('admin.packages.destroy', $package->id) }}"
                                         method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger delete_package mr-2"
-                                            id="" title="Delete" data-type="confirm"><i class="fa fa-trash"></i>
+                                        <button class="btn btn-sm btn-danger delete_package mr-2" id=""
+                                            data-type="confirm" type="submit" title="Delete"><i class="fa fa-trash"></i>
                                             Delete</button>
                                     </form>
                                 </td>
@@ -92,7 +93,6 @@
         </div>
     </div>
 @endsection
-
 
 @section('scripts')
     <script>

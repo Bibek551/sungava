@@ -220,6 +220,16 @@
 
                                                 <div class="col-md-6">
                                                     <div class="form-group mb-3">
+                                                        <label for="package_slogan">Package Slogan</label>
+                                                        <input class="form-control br-8" type="text"
+                                                            name="package_slogan"
+                                                            value="{{ $settings['package_slogan'] ?? '' }}"
+                                                            placeholder="Enter Package Slogan">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3">
                                                         <label for="team_title">Team Title</label>
                                                         <input class="form-control br-8" type="text" name="team_title"
                                                             value="{{ $settings['team_title'] ?? '' }}"
@@ -269,6 +279,36 @@
                                                             Description</label>
                                                         <textarea class="form-control br-8" name="service_section_description" rows="4"
                                                             placeholder="Enter Something ...">{{ $settings['service_section_description'] ?? '' }}</textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group mb-3">
+                                                        <label for="destination_count">Destinations Count</label>
+                                                        <input class="form-control br-8" type="text"
+                                                            name="destination_count"
+                                                            value="{{ $settings['destination_count'] ?? '' }}"
+                                                            placeholder="Enter Destination count">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group mb-3">
+                                                        <label for="package_count">Packages Count</label>
+                                                        <input class="form-control br-8" type="text"
+                                                            name="package_count"
+                                                            value="{{ $settings['package_count'] ?? '' }}"
+                                                            placeholder="Enter P;ackage count">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group mb-3">
+                                                        <label for="customer_count">Customers Count</label>
+                                                        <input class="form-control br-8" type="text"
+                                                            name="customer_count"
+                                                            value="{{ $settings['customer_count'] ?? '' }}"
+                                                            placeholder="Enter Customer count">
                                                     </div>
                                                 </div>
 
@@ -417,16 +457,44 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-12">
+                                                <div class="col-md-4">
                                                     <div class="form-group mb-3">
                                                         <label for="about_page_image">About Page Image <span
-                                                                class="fw-bold">(1024* 683)</span>
+                                                                class="fw-bold"></span>
                                                         </label>
                                                         <div class="custom-file">
                                                             <input class="about_page_image" id="about_page_image"
                                                                 data-default-file="{{ $settings['about_page_image'] != null ? asset('admin/images/setting') . '/' . $settings['about_page_image'] : null }}"
                                                                 data-show-remove="false" type="file"
                                                                 name="about_page_image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group mb-3">
+                                                        <label for="about_page_image_2">About Page Second Image <span
+                                                                class="fw-bold"></span>
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input class="about_page_image_2" id="about_page_image_2"
+                                                                data-default-file="{{ $settings['about_page_image_2'] != null ? asset('admin/images/setting') . '/' . $settings['about_page_image_2'] : null }}"
+                                                                data-show-remove="false" type="file"
+                                                                name="about_page_image_2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group mb-3">
+                                                        <label for="about_page_image_3">About Page Third Image <span
+                                                                class="fw-bold"></span>
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input class="about_page_image_3" id="about_page_image_3"
+                                                                data-default-file="{{ $settings['about_page_image_3'] != null ? asset('admin/images/setting') . '/' . $settings['about_page_image_3'] : null }}"
+                                                                data-show-remove="false" type="file"
+                                                                name="about_page_image_3">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -644,6 +712,24 @@
         });
 
         $('.about_page_image').dropify({
+            messages: {
+                'default': '',
+                'replace': '',
+                'remove': 'Remove',
+                'error': 'Ooops, something wrong happended.'
+            }
+        });
+
+        $('.about_page_image_2').dropify({
+            messages: {
+                'default': '',
+                'replace': '',
+                'remove': 'Remove',
+                'error': 'Ooops, something wrong happended.'
+            }
+        });
+
+        $('.about_page_image_3').dropify({
             messages: {
                 'default': '',
                 'replace': '',

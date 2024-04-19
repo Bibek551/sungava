@@ -13,14 +13,14 @@
 
             <small class="text-muted float-end">
                 @if ($parent == 0)
-                    <a href="{{ route('admin.destinations.create') }}" class="btn btn-primary"><i class="fa-solid fa-plus"></i>
+                    <a class="btn btn-primary" href="{{ route('admin.destinations.create') }}"><i class="fa-solid fa-plus"></i>
                         Create</a>
                 @else
                     <a class="btn btn-primary" href="{{ route('admin.destinations.create', ['parent' => $parent]) }}"><i
                             class="fa-solid fa-plus"></i>
                         Create</a>
 
-                    <a href="{{ route('admin.destinations.index') }}" class="btn btn-secondary"><i
+                    <a class="btn btn-secondary" href="{{ route('admin.destinations.index') }}"><i
                             class="fa-solid fa-arrow-left"></i>
                         Back</a>
                 @endif
@@ -45,10 +45,10 @@
                             <tr>
                                 <td><strong>{{ $key + $destinations->firstItem() }}</strong></td>
                                 <td class="">
-                                    <a href="{{ $destination->image ?: 'avatar.png' }}" data-fancybox="demo"
-                                        class="fancybox">
+                                    <a class="fancybox" data-fancybox="demo"
+                                        href="{{ $destination->image ?: 'avatar.png' }}">
                                         <img src="{{ $destination->image ?: 'avatar.png' }}" alt="{{ $destination->name }}"
-                                            width="80px">
+                                            width="80px" height="60px">
                                     </a>
                                 </td>
                                 <td><strong>{{ $destination->name ?? '' }}</strong></td>
@@ -58,18 +58,21 @@
                                 <td>{{ $destination->order ?? '' }}</td>
 
                                 <td>
-                                    <a href="{{ route('admin.destinations.index', ['parent' => $destination->id]) }}"
-                                        style="float: left;margin-right: 5px;" class="btn btn-sm btn-dark"><i
-                                            class="fa fa-align-justify"></i> Sub/Destination</a>
+                                    <a class="btn btn-sm btn-dark"
+                                        href="{{ route('admin.destinations.index', ['parent' => $destination->id]) }}"
+                                        style="float: left;margin-right: 5px;"><i class="fa fa-align-justify"></i>
+                                        Sub/Destination</a>
 
                                     @if (!$parent)
-                                        <a href="{{ route('admin.destinations.edit', $destination->id) }}"
-                                            style="float: left;margin-right: 5px;" class="btn btn-sm btn-primary"><i
-                                                class="fa-solid fa-pen-to-square"></i> Edit</a>
+                                        <a class="btn btn-sm btn-primary"
+                                            href="{{ route('admin.destinations.edit', $destination->id) }}"
+                                            style="float: left;margin-right: 5px;"><i class="fa-solid fa-pen-to-square"></i>
+                                            Edit</a>
                                     @else
-                                        <a href="{{ route('admin.destinations.edit', ['destination' => $destination->id, 'parent' => $parent]) }}"
-                                            style="float: left;margin-right: 5px;" class="btn btn-sm btn-primary"><i
-                                                class="fa-solid fa-pen-to-square"></i> Edit</a>
+                                        <a class="btn btn-sm btn-primary"
+                                            href="{{ route('admin.destinations.edit', ['destination' => $destination->id, 'parent' => $parent]) }}"
+                                            style="float: left;margin-right: 5px;"><i class="fa-solid fa-pen-to-square"></i>
+                                            Edit</a>
                                     @endif
 
                                     <form class="delete-form"
@@ -77,8 +80,8 @@
                                         method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger delete_destination mr-2"
-                                            id="" title="Delete" data-type="confirm"><i class="fa fa-trash"></i>
+                                        <button class="btn btn-sm btn-danger delete_destination mr-2" id=""
+                                            data-type="confirm" type="submit" title="Delete"><i class="fa fa-trash"></i>
                                             Delete</button>
                                     </form>
                                 </td>
@@ -95,7 +98,6 @@
         </div>
     </div>
 @endsection
-
 
 @section('scripts')
     <script>
