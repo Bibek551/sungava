@@ -11,6 +11,7 @@ class WhyChooseUs extends Model
 
     protected $fillable = [
         'title',
+        'icon',
         'image',
         'description',
         'short_description',

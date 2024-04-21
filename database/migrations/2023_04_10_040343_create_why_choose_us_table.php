@@ -16,6 +16,7 @@ class CreateWhyChooseUsTable extends Migration
         Schema::create('why_choose_us', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('icon')->nullable();
             $table->string('image')->nullable();
             $table->longText('description')->nullable();
             $table->longText('short_description')->nullable();

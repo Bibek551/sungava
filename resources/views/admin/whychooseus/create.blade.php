@@ -9,7 +9,7 @@
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h5 class="mb-0">Create Whychooseus</h5>
                 <small class="text-muted float-end">
-                    <a href="{{ route('admin.whychooseus.index') }}" class="btn btn-primary"><i
+                    <a class="btn btn-primary" href="{{ route('admin.whychooseus.index') }}"><i
                             class="fa-solid fa-arrow-left"></i>
                         Back</a>
                 </small>
@@ -21,19 +21,33 @@
                     <div class="row">
                         <div class="col-md-8">
                             <div class="mb-3">
-                                <label class="form-label" for="basic-default-fullname">Title</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                    name="title" id="" value="{{ old('title') }}" placeholder="">
-                                @error('title')
-                                    <div class="invalid-feedback" style="display: block;">
-                                        {{ $message }}
+                                <div class="row">
+                                    <div class="col-8">
+                                        <label class="form-label" for="basic-default-fullname">Title</label>
+                                        <input class="form-control @error('title') is-invalid @enderror" id=""
+                                            type="text" name="title" value="{{ old('title') }}" placeholder="">
+                                        @error('title')
+                                            <div class="invalid-feedback" style="display: block;">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
-                                @enderror
+                                    <div class="col-4">
+                                        <label class="form-label" for="basic-default-fullname">Icon</label>
+                                        <input class="form-control @error('icon') is-invalid @enderror" id=""
+                                            type="text" name="icon" value="{{ old('icon') }}" placeholder="">
+                                        @error('icon')
+                                            <div class="invalid-feedback" style="display: block;">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label" for="basic-default-message">Description</label>
-                                <textarea id="" class="form-control @error('description') is-invalid @enderror ckeditor" name="description"
+                                <textarea class="form-control @error('description') is-invalid @enderror ckeditor" id="" name="description"
                                     rows="8" placeholder="">{{ old('description') }}</textarea>
                                 @error('description')
                                     <div class="invalid-feedback" style="display: block;">
@@ -44,7 +58,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label" for="basic-default-message">Short Description</label>
-                                <textarea id="" class="form-control @error('short_description') is-invalid @enderror" name="short_description"
+                                <textarea class="form-control @error('short_description') is-invalid @enderror" id="" name="short_description"
                                     rows="4" placeholder="">{{ old('short_description') }}</textarea>
                                 @error('short_description')
                                     <div class="invalid-feedback" style="display: block;">
@@ -55,9 +69,9 @@
 
                             <div class="mb-3">
                                 <label class="form-label" for="basic-default-message">Image</label>
-                                <input type="file" class="form-control @error('image') is-invalid @enderror image"
-                                    name="image" id="">
-                                <img src="" height="100" alt="" class="view-image mt-2">
+                                <input class="form-control @error('image') is-invalid @enderror image" id=""
+                                    type="file" name="image">
+                                <img class="view-image mt-2" src="" height="100" alt="">
                                 @error('image')
                                     <div class="invalid-feedback" style="display: block;">
                                         {{ $message }}
@@ -69,8 +83,8 @@
                             <div class="card card-body seo my-3 shadow br-8 p-4">
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-fullname">Seo Title</label>
-                                    <input type="text" class="form-control @error('seo_title') is-invalid @enderror"
-                                        name="seo_title" id="" value="{{ old('seo_title') }}" placeholder="">
+                                    <input class="form-control @error('seo_title') is-invalid @enderror" id=""
+                                        type="text" name="seo_title" value="{{ old('seo_title') }}" placeholder="">
                                     @error('seo_title')
                                         <div class="invalid-feedback" style="display: block;">
                                             {{ $message }}
@@ -80,8 +94,8 @@
 
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-fullname">Meta Description</label>
-                                    <textarea name="meta_description" id="" cols="30" rows="10"
-                                        class="form-control @error('meta_description') is-invalid @enderror">{{ old('meta_description') }}</textarea>
+                                    <textarea class="form-control @error('meta_description') is-invalid @enderror" id="" name="meta_description"
+                                        cols="30" rows="10">{{ old('meta_description') }}</textarea>
                                     @error('meta_description')
                                         <div class="invalid-feedback" style="display: block;">
                                             {{ $message }}
@@ -91,8 +105,8 @@
 
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-fullname">Meta Keywords</label>
-                                    <input type="text" class="form-control @error('meta_keywords') is-invalid @enderror"
-                                        name="meta_keywords" id="" value="{{ old('meta_keywords') }}"
+                                    <input class="form-control @error('meta_keywords') is-invalid @enderror" id=""
+                                        type="text" name="meta_keywords" value="{{ old('meta_keywords') }}"
                                         placeholder="">
                                     @error('meta_keywords')
                                         <div class="invalid-feedback" style="display: block;">
@@ -104,7 +118,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Create</button>
+                    <button class="btn btn-primary" type="submit"><i class="fa-solid fa-plus"></i> Create</button>
                 </form>
             </div>
         </div>
