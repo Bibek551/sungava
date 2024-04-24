@@ -549,6 +549,7 @@ class ApiController extends Controller
             return response()->json(['statusCode' => 401, 'error' => true, 'message' => $e->getMessage()]);
         }
     }
+
     public function categorywiseFilter($slug)
     {
         try {

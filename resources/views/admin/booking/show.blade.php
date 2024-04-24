@@ -24,6 +24,10 @@
                                 <th>Package</th>
                                 <td>{{ $booking->package->name ?? '-' }}</td>
                             </tr>
+                            <tr>
+                                <th>Country</th>
+                                <td>{{ $booking->country ?? '-' }}</td>
+                            </tr>
 
                             <tr>
                                 <th>Email</th>
