@@ -25,12 +25,7 @@ class UpdatePackageRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'description' => 'required',
             'status' => 'required',
-            'adult_price' => 'required',
-            'duration' => 'required',
-            // 'package_category_id' => 'required',
-            'destination_ids' => 'required'
         ];
     }
 

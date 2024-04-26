@@ -95,6 +95,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], fu
 
     Route::get('add-post-to-menu', [MenuController::class, 'addPostToMenu'])->name('menu.addpost');
     Route::get('add-page-to-menu', [MenuController::class, 'addPageToMenu'])->name('menu.addpage');
+    Route::get('add-package-to-menu', [MenuController::class, 'addPackageToMenu'])->name('menu.addpackage');
     Route::get('add-destination-to-menu', [MenuController::class, 'addDestinationToMenu'])->name('menu.adddestination');
     Route::get('add-custom-link', [MenuController::class, 'addCustomLink'])->name('menu.addcustom');
 
